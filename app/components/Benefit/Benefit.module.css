@@ -1,0 +1,84 @@
+.Box {
+    max-width: 1520px;
+    min-height: 400px;
+    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.heading2 {
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: #002458;
+}
+
+.heading5 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #002458;
+}
+
+.body1 {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #002458;
+
+}
+
+.upperBox {
+    width: 100%;
+    height: 72px;
+    text-align: center;
+}
+
+.downBox {
+    width: 100%;
+    min-height: 268px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    /* border: 2px solid yellowgreen; */
+}
+
+.subBox {
+    width: 413.33px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid rgb(0, 128, 100); */
+}
+
+.contentBox {
+    width: 413.33px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid rgb(110, 33, 199); */
+}
+
+.cntHead {
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 36px;
+}
+
+.cntbody {
+    width: 100%;
+    /* border: 2px solid black; */
+    height: 81px;
+    opacity: 80%;
+}
