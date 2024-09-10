@@ -1,3 +1,11 @@
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 .heading2 {
   font-size: 48px;
   line-height: 72px;
@@ -27,7 +35,7 @@
   gap: 60px;
   margin: 120px auto 0px auto;
   /* border: 3px solid rgb(207, 9, 9); */
-  
+
   /* display: flex;
 
   flex-direction: column; */
@@ -89,6 +97,14 @@
   /* border: 2px solid red; */
   margin-bottom: 24px;
   /* margin: auto; */
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 
 .btn {
@@ -118,7 +134,7 @@
     font-size: 14px;
     line-height: 21px;
   }
-  
+
   .body1 {
     font-size: 14px;
     line-height: 21px;
@@ -135,7 +151,6 @@
     justify-content: "";
     align-items: center; */
     /* display: block; */
- 
   }
 
   .upperContainer {
@@ -143,7 +158,6 @@
     min-height: 36px;
     height: 100%;
     /* border: 2px dotted green; */
-
   }
 
   .lowerContainer {
@@ -152,11 +166,10 @@
     /* max-height: 100%; */
     gap: 14px;
     min-height: 48px;
-    
-}
+  }
 
-.content {
-      /* border: 2px dotted rgb(98, 0, 128); */
+  .content {
+    /* border: 2px dotted rgb(98, 0, 128); */
     gap: 6px;
     border-radius: 6px;
     padding: 12px;
@@ -176,8 +189,7 @@
     display: flex;
     flex-wrap: wrap;
     /* border: 2px solid green; */
-    justify-content: space-between;   
-
+    justify-content: space-between;
   }
 
   .subDescription {

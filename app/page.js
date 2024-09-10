@@ -7,6 +7,7 @@ import Working from "./components/Working/Working";
 import Article from "./components/Article/Article";
 import Faq from "./components/FAQ/Faq";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const latoHeading = Lato({
   weight: "700",
@@ -98,6 +99,9 @@ export default function Home() {
 
       {/* ContactUs section */}
       <Contact />
+
+      {/* Footer Section */}
+      <Footer />
     </main>
   );
 }

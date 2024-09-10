@@ -21,8 +21,10 @@ const Contact = () => {
           </h4>
         </div>
         <div className={connect.downBox}>
-          <img src="./map.png" className={connect.img1}/>
-          <img src="./contact.png" className={connect.img2}/>
+          <div className={connect.ml}>
+            <img src="./map.png" className={connect.img1} />
+          </div>
+          <img src="./contact.png" className={connect.img2} />
         </div>
       </div>
     </>

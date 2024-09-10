@@ -14,8 +14,31 @@ const latoBody = Lato({
   subsets: ["latin"],
 });
 
+const qna = [
+  {
+    question: "What is a personal loan?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.",
+  },
+  {
+    question: "How much can I borrow with a personal loan?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.",
+  },
+  {
+    question: "How quickly can I receive the funds?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.",
+  },
+  {
+    question: "What are the eligibility criteria for a personal loan?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.",
+  },
+];
+
 const Faq = () => {
-  const [display, setDisplay] = useState([false, false, false, false]);
+  const [display, setDisplay] = useState(Array(qna.length).fill(false));
 
   const toggleDisplay = (index) => {
     setDisplay((prevDisplay) => {
@@ -24,6 +47,13 @@ const Faq = () => {
       return newDisplay;
     });
   };
+
+  // const [activeIndex, setActiveIndex] = useState(null);
+
+  // const toggleDisplay = (index) => {
+  //   setActiveIndex(index === activeIndex ? null : index); // Toggle the display for each FAQ
+  // };
+
   return (
     <>
       <section className={faq.container}>
@@ -33,7 +63,39 @@ const Faq = () => {
           </h2>
         </div>
         <section className={faq.lowerContainer}>
-          <article className={faq.content}>
+          {qna.map((item, index) => {
+            return (
+              <div key={index}>
+                <article className={faq.content}>
+                  <div
+                    className={faq.description}
+                    onClick={() => {
+                      toggleDisplay(index);
+                    }}
+                  >
+                    <h3 className={`${latoHeading.className} ${faq.subtitle3}`}>
+                      {item.question}
+                    </h3>
+                    <p style={{ position: "absolute", right: "3%" }}>
+                      {display[index] ? "-" : "+"}
+                    </p>
+                  </div>
+                </article>
+                {  (
+                  <div className={`${faq.subDescription} ${display[index]===true ? faq.visible:faq.hidden}`}>
+                    <p className={`${latoBody.className} ${faq.body1}`}>
+                      {item.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+
+
+
+
+          {/* <article className={faq.content}>
             <div
               className={faq.description}
               onClick={() => {
@@ -43,7 +105,9 @@ const Faq = () => {
               <h3 className={`${latoHeading.className} ${faq.subtitle3}`}>
                 What is personal Loan?
               </h3>
-              <p style={{position:"absolute", right:"3%"}}>{display[0] ? "-" : "+"}</p>
+              <p style={{ position: "absolute", right: "3%" }}>
+                {display[0] ? "-" : "+"}
+              </p>
             </div>
           </article>
           {display[0] && (
@@ -55,75 +119,7 @@ const Faq = () => {
                 Varius tellus justo odio parturient mauris curabitur lorem in.
               </p>
             </div>
-          )}
-
-          <article className={faq.content}>
-            <div
-              className={faq.description}
-              onClick={() => {
-                toggleDisplay(1);
-              }}
-            >
-              <h3 className={`${latoHeading.className} ${faq.subtitle3}`}>
-                How much can I borrow with a personal loan?
-              </h3>
-              <p style={{position:"absolute", right:"3%"}}>{display[1] ? "-" : "+"}</p>
-            </div>
-          </article>
-          {display[1] && (
-            <div className={faq.subDescription}>
-              <p className={`${latoBody.className} ${faq.body1}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                facilisis faucibus odio arcu duis dui, adipiscing facilisis.
-                Urna, donec turpis egestas volutpat. Quisque nec non amet quis.
-                Varius tellus justo odio parturient mauris curabitur lorem in.
-              </p>
-            </div>
-          )}
-
-          <article className={faq.content}>
-            <div
-              className={faq.description}
-              onClick={() => {
-                toggleDisplay(2);
-              }}
-            >
-              <h3 className={`${latoHeading.className} ${faq.subtitle3}`}>
-                How quickly can I receive the funds?
-              </h3>
-              <p style={{position:"absolute", right:"3%"}}>{display[2] ? "-" : "+"}</p>
-            </div>
-          </article>
-          {display[2] && (
-            <div className={faq.subDescription}>
-              <p className={`${latoBody.className} ${faq.body1}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                facilisis faucibus odio arcu duis dui, adipiscing facilisis.
-                Urna, donec turpis egestas volutpat. Quisque nec non amet quis.
-                Varius tellus justo odio parturient mauris curabitur lorem in.
-              </p>
-            </div>
-          )}
-
-          <article className={faq.content}>
-            <div className={faq.description} onClick={()=>{toggleDisplay(3)}}>
-              <h3 className={`${latoHeading.className} ${faq.subtitle3}`} >
-                What are the eligibility criteria for a personal loan?
-              </h3>
-              <p style={{position:"absolute", right:"3%"}}>{display[3] ? "-" : "+"}</p>
-            </div>
-          </article>
-          {display[3] && (
-            <div className={faq.subDescription}>
-              <p className={`${latoBody.className} ${faq.body1}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                facilisis faucibus odio arcu duis dui, adipiscing facilisis.
-                Urna, donec turpis egestas volutpat. Quisque nec non amet quis.
-                Varius tellus justo odio parturient mauris curabitur lorem in.
-              </p>
-            </div>
-          )}
-
+          )} */}
         </section>
 
         <button className={`${latoHeading.className} ${faq.btn}`}>
@@ -135,3 +131,9 @@ const Faq = () => {
 };
 
 export default Faq;
+
+
+
+
+
+
