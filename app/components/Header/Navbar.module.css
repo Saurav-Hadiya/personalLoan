@@ -2,14 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid yellow; */
     min-width: 100%;
     height: 84px;
     box-shadow: 0 2px 4px 0 #E6F0FF;
 }
 
 .navBox {
-    /* border: 1px solid black; */
     width: 100%;
     max-width: 1520px;
     height: 60px;
@@ -17,13 +15,15 @@
     justify-content: space-between;
     align-items: center;
     margin: 10.75%;
-    /* margin-left: 200px; */
 }
 
 .imgBox {
     width: 200.73px;
     height: 60px;
-    /* border: 2px solid red; */
+}
+.imgBox img{
+    width: 100%;
+    height: 100%;
 }
 
 .rightNavBox {

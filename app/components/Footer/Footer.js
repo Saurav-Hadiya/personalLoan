@@ -1,4 +1,6 @@
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaFacebook } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 import { Lato } from "next/font/google";
 import Link from "next/link";
@@ -44,10 +46,30 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className={footer.rightUpper}></div>
+            <div className={footer.rightUpper}>
+              <FaSquareXTwitter className={footer.icon} />
+              <IoLogoWhatsapp className={footer.icon} />
+              <FaFacebook className={footer.icon} />
+            </div>
           </div>
           <hr />
-          <div className={footer.upperBox}></div>
+          <div className={footer.lowerBox}>
+            <div className={`${footer.rightLower} ${latoBody.className} ${footer.body1}`}>
+              <span>Terms of Service</span>
+              <span className={footer.visibility}>|</span>
+              <span>Privacy Policy</span>
+            </div>
+
+            <div className={footer.middleLower}>
+              <img src="./logo.png" className={footer.imgBox} alt="Logo"/>
+            </div>
+
+            <div
+              className={`${latoBody.className} ${footer.leftLower} ${footer.body1}`}
+            >
+              © 2024 Rapid Personal Loan. All&nbsp;rights&nbsp;reserved.
+            </div>
+          </div>
         </div>
       </footer>
     </>

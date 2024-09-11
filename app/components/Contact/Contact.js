@@ -22,9 +22,9 @@ const Contact = () => {
         </div>
         <div className={connect.downBox}>
           <div className={connect.ml}>
-            <img src="./map.png" className={connect.img1} />
+            <img src="./map.png" className={connect.img1} alt="Map"/>
           </div>
-          <img src="./contact.png" className={connect.img2} />
+          <img src="./contact.png" className={connect.img2} alt="contactUs"/>
         </div>
       </div>
     </>

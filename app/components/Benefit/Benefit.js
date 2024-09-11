@@ -23,7 +23,7 @@ const Benefit = () => {
         </div>
         <div className={key.downBox}>
           <div className={key.subBox}>
-            <img src="./benefitImg-1.png" />
+            <img src="./benefitImg-1.png" alt="Benefit"/>
             <div className={key.contentBox}>
               <div className={key.cntHead}>
                 <h2 className={`${latoHeading.className} ${key.heading5}`}>Loan for Everyone</h2>
@@ -37,7 +37,7 @@ const Benefit = () => {
             </div>
           </div>
           <div className={key.subBox}>
-            <img src="./benefitImg-2.png" />
+            <img src="./benefitImg-2.png" alt="Benefit"/>
             <div className={key.contentBox}>
               <div className={key.cntHead}>
                 <h2 className={`${latoHeading.className} ${key.heading5}`}>Quick process</h2>
@@ -50,7 +50,7 @@ const Benefit = () => {
             </div>
           </div>
           <div className={key.subBox}>
-            <img src="./benefitImg-3.png" />
+            <img src="./benefitImg-3.png" alt="Benefit"/>
             <div className={key.contentBox}>
               <div className={key.cntHead}>
                 <h2 className={`${latoHeading.className} ${key.heading5}`}>Direct Deposit</h2>

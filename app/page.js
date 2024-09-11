@@ -1,5 +1,4 @@
 import { Lato } from "next/font/google";
-
 import styles from "./page.module.css";
 import Navbar from "./components/Header/Navbar";
 import Benefit from "./components/Benefit/Benefit";
@@ -18,9 +17,13 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-export default function Home() {
+
+
+export default async function Home() {
+
   return (
     <main>
+      {/* Navigation bar */}
       <Navbar />
 
       {/* Request fund box */}
@@ -45,8 +48,8 @@ export default function Home() {
 
       {/* Pictures */}
       <div className={styles.pictures}>
-        <img src="./image-1.png" className={styles.image1} />
-        <img src="./image-2.png" className={styles.image2} />
+        <img src="./image-1.png" className={styles.image1} alt="image-1" />
+        <img src="./image-2.png" className={styles.image2} alt="image-2" />
       </div>
 
       {/* Learn more section */}
@@ -72,6 +75,7 @@ export default function Home() {
       <Benefit />
 
       <Working />
+
       {/* Financial freedom section */}
       <div className={styles.finance}>
         <div className={styles.financeContent}>
@@ -92,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Articles section */}
-      <Article />
+      <Article headline="Latest Articles" limit="3" />
 
       {/* FAQ section */}
       <Faq />

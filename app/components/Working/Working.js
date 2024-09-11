@@ -59,8 +59,8 @@ const Working = () => {
                   height: "133.33px",
                   gap: "10px",
                   position: "relative",
-                  display:"flex",
-                  justifyContent:"center"
+                  display: "flex",
+                  justifyContent: "center",
                 }}
               >
                 <div className={process.index}>
@@ -132,8 +132,13 @@ const Working = () => {
               </div>
             </div>
           </div>
-          {/* <div className={process.rightLower}></div> */}
-          <img src="./working.png" className={process.rightLower} />
+          <div className={process.rightLower}>
+            <img
+              src="./working.png"
+              className={process.rightLowerImage}
+              alt="Working"
+            />
+          </div>
         </div>
       </div>
     </>
