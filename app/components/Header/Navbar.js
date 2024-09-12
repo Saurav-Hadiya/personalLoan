@@ -14,31 +14,9 @@ const Navbar = () => {
       <div className={nav.navbar}>
         {/* Navbar-Box */}
         <div className={nav.navBox}>
-          {/* Left side- logo */}
-          {/* <div className={nav.imgBox}>
-            <Image
-              src={"/logo.png"}
-              // layout="fill"
-              layout="responsive"
-              width={100}
-              height={100}
-              alt="Logo"
-              fill
-            />
-          </div> */}
-
-          {/* <div>
-            <Image
-              src={"/logo.png"}
-              alt="Description"
-              layout="responsive"
-              width={218.73}
-              height={60}
-            />
-          </div> */}
           <div className={nav.imgBox}>
             <a href="/">
-              <img src="./logo.png" alt="Logo" />
+              <img src="/logo.png" alt="Logo" />
             </a>
           </div>
 

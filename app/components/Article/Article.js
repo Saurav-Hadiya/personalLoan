@@ -1,8 +1,12 @@
+"use client";
 import cnt from "./Article.module.css";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { Lato } from "next/font/google";
+import slugify from "slugify";
 
 const latoHeading = Lato({
   weight: "700",
@@ -14,20 +18,26 @@ const latoBody = Lato({
   subsets: ["latin"],
 });
 
-const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}`;
-console.log(url);
+const Article = ({ headline, limit, data }) => {
+  const totalData = limit ? data?.items.slice(0, limit) : data.items;
 
-const Article = async ({ headline, limit }) => {
-  const response = await fetch(url);
-  const data = await response.json();
-  const dataToShow = limit ? data.items.slice(0, limit) : data.items;
   const itemsPerPage = 9;
-  const pageCount =
-    dataToShow.length % itemsPerPage === 0
-      ? dataToShow.length / itemsPerPage 
-      : Math.ceil(dataToShow.length / itemsPerPage);
-  const pages = [...Array(pageCount).keys()];
-  console.log("data::::::::: ", pageCount);
+  const totalPages =
+    totalData.length % itemsPerPage === 0
+      ? totalData.length / itemsPerPage
+      : Math.ceil(totalData.length / itemsPerPage);
+  const [pageNumber, setPageNumber] = useState(1);
+  const startIndex = itemsPerPage * pageNumber - itemsPerPage;
+  const endIndex = itemsPerPage * pageNumber;
+  const router = useRouter();
+  const navigateToPage = (arg) => {
+    router.push(`/${arg}`);
+  };
+
+  const dataToShow = totalData.slice(startIndex, endIndex);
+  console.log("dataToShow:: ", dataToShow);
+
+  const pages = [...Array(totalPages).keys()];
 
   return (
     <>
@@ -42,10 +52,9 @@ const Article = async ({ headline, limit }) => {
             const image = data.includes.Asset.find(
               (asset) => asset.sys.id === info.fields.images.sys.id
             );
-            // console.log("image::", image.fields.file.url);
-            // image.fields.file.url
+            const slug = slugify(info.fields.title,{lower:true});
             return (
-              <section className={cnt.content} key={index}>
+              <section className={cnt.content} key={index} >
                 <img
                   src={`http:${image.fields.file.url}`}
                   alt="article-img"
@@ -58,7 +67,7 @@ const Article = async ({ headline, limit }) => {
                   <div className={`${latoBody.className} ${cnt.body1}`}>
                     {documentToReactComponents(info.fields.body)}
                   </div>
-                  <Link href={"#"}>Read More </Link>
+                  <Link href={`articles/${slug}`}>Read More</Link>
                 </div>
               </section>
             );
@@ -66,7 +75,10 @@ const Article = async ({ headline, limit }) => {
         </div>
 
         {limit ? (
-          <button className={`${latoHeading.className} ${cnt.btn}`}>
+          <button
+            className={`${latoHeading.className} ${cnt.btn}`}
+            onClick={()=>navigateToPage("articles")}
+          >
             View all
           </button>
         ) : (
@@ -78,23 +90,67 @@ const Article = async ({ headline, limit }) => {
             }}
           >
             <div className={cnt.pagination}>
-              <div className={`${latoBody.className} ${cnt.body1}`}>Prev</div>
-              {pages.map((num,index)=>{
-                return(
-                  <span className={cnt.page}>{num+1}</span>
-
-                )
+              {pageNumber === 1 ? undefined : (
+                <div
+                  className={`${latoBody.className} ${cnt.body1} ${
+                    totalPages === 1 ? cnt.visibility : undefined
+                  }`}
+                  style={{ color: "#252628", cursor: "pointer" }}
+                  onClick={() => setPageNumber(pageNumber - 1)}
+                >
+                  Prev
+                </div>
+              )}
+              {/* {pages.map((num, index) => {
+                return (
+                  <span
+                    key={index}
+                    className={cnt.page}
+                    style={
+                      pageNumber === num + 1
+                        ? { backgroundColor: "#0056D2", color: "#FFFFFF" }
+                        : undefined
+                    }
+                    onClick={() => setPageNumber(num + 1)}
+                  >
+                    {totalPages > 5
+                      ? index >= 3
+                        ? index === 3
+                          ? "..."
+                          : totalPages
+                        : num + 1
+                      : num + 1}
+                  </span>
+                );
+              })} */}
+              {pages.map((num, index) => {
+                return (
+                  <span
+                    key={index}
+                    className={cnt.page}
+                    style={
+                      pageNumber === num + 1
+                        ? { backgroundColor: "#0056D2", color: "#FFFFFF" }
+                        : undefined
+                    }
+                    onClick={() => setPageNumber(num + 1)}
+                  >
+                    {num + 1}
+                  </span>
+                );
               })}
-              
-              {/* <span className={cnt.page}>1</span>
-              <span className={cnt.page}>2</span>
-              <span className={cnt.page}>3</span> */}
-              <div
-                className={`${latoBody.className} ${cnt.body1}`}
-                style={{ color: "#252628" }}
-              >
-                Next
-              </div>
+
+              {pageNumber === totalPages ? undefined : (
+                <div
+                  className={`${latoBody.className} ${cnt.body1} ${
+                    totalPages === 1 ? cnt.visibility : undefined
+                  }`}
+                  style={{ color: "#252628", cursor: "pointer" }}
+                  onClick={() => setPageNumber(pageNumber + 1)}
+                >
+                  Next
+                </div>
+              )}
             </div>
           </div>
         )}

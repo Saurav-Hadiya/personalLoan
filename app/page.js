@@ -17,9 +17,12 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-
+const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}`;
 
 export default async function Home() {
+
+  const response = await fetch(url);
+  const data = await response.json();
 
   return (
     <main>
@@ -96,7 +99,7 @@ export default async function Home() {
       </div>
 
       {/* Articles section */}
-      <Article headline="Latest Articles" limit="3" />
+      <Article headline="Latest Articles" limit="3" data={data}/>
 
       {/* FAQ section */}
       <Faq />

@@ -54,7 +54,7 @@ export default async function Articles() {
       </div>
 
       {/* Article lists */}
-      <Article headline="Article Lists"/>
+      <Article headline="Article Lists" data={data}/>
 
       {/* Footer */}
       <Footer />

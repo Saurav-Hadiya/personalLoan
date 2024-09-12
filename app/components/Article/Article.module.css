@@ -89,7 +89,6 @@
 .pagination {
     /* border: 1px solid black; */
     max-width:  395px;
-    /* height: auto; */
     /* width: 100%; */
     /* max-height: 40px; */
     /* height: 100%; */
@@ -114,6 +113,10 @@
     gap: 10px;
     cursor: pointer;
 
+}
+
+.visibility{
+  display: none;
 }
 
 @media only screen and (max-width: 500px) {

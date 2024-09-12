@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
 
             <div className={footer.middleLower}>
-              <img src="./logo.png" className={footer.imgBox} alt="Logo"/>
+              <img src="/logo.png" className={footer.imgBox} alt="Logo"/>
             </div>
 
             <div

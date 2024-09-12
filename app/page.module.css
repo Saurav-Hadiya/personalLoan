@@ -1,5 +1,4 @@
 .fundBox {
-
   max-width: 48.31%;
   height: 372px;
   /* border: 2px solid green; */
@@ -8,7 +7,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .fundBox .upperBox {
@@ -32,7 +30,6 @@
   color: #002458;
   line-height: 84px;
   text-align: center;
-
 }
 
 .heading2 {
@@ -40,7 +37,6 @@
   color: #002458;
   line-height: 72px;
   text-align: center;
-
 }
 
 .subtitle2 {
@@ -48,7 +44,6 @@
   color: #002458;
   line-height: 38.4px;
   text-align: center;
-
 }
 
 .subtitle4 {
@@ -56,7 +51,6 @@
   color: #002458;
   line-height: 30px;
   text-align: center;
-
 }
 
 .fundBox .upperBox .box2 {
@@ -65,10 +59,9 @@
   /* border: 2px solid gray; */
 }
 
-
 .btn {
-  background-color: #0056D2;
-  color: #FFFFFF;
+  background-color: #0056d2;
+  color: #ffffff;
   height: 64px;
   width: 288px;
   border-radius: 168px;
@@ -80,7 +73,6 @@
   cursor: pointer;
 }
 
-
 .pictures {
   max-width: 1795.36px;
   height: 419.93px;
@@ -88,7 +80,6 @@
   margin: 0px 60px 0px 60px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .image1 {
@@ -118,7 +109,6 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-
 }
 
 .learnMore::before {
@@ -144,18 +134,20 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .finance {
-
   width: 100vw;
   height: 508px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-  background: linear-gradient(92.15deg, rgba(199, 230, 249, 0.5) 0%, rgba(232, 209, 254, 0.5) 100%);
+  background: linear-gradient(
+    92.15deg,
+    rgba(199, 230, 249, 0.5) 0%,
+    rgba(232, 209, 254, 0.5) 100%
+  );
 }
 
 .financeContent {
@@ -191,9 +183,7 @@
   min-height: 60px;
 }
 
-@media only screen and (max-width: 1900PX) {
-
-
+@media only screen and (max-width: 1900px) {
   .heading1 {
     font-size: 48px;
     line-height: 72px;
@@ -204,13 +194,11 @@
     line-height: 30px;
   }
 
-
   .image1 {
     width: 380px;
     max-height: 380px;
     margin-top: 21px;
     transform: rotate(1.6deg);
-
   }
 
   .image2 {
@@ -218,16 +206,13 @@
     max-height: 350px;
     margin-top: 57px;
     transform: rotate(-2deg);
-
   }
 
   .learnMore {
     width: 235.568vw;
     height: 430px;
     overflow-x: hidden;
-
   }
-
 
   .learnBox {
     width: 1000px;
@@ -235,13 +220,10 @@
     left: 50%;
     transform: translateX(-50%);
     gap: 12px;
-  
   }
 }
 
 @media only screen and (max-width: 1500px) {
-
-
   .heading1 {
     font-size: 48px;
     line-height: 72px;
@@ -252,13 +234,11 @@
     line-height: 30px;
   }
 
-
   .image1 {
     width: 380px;
     max-height: 380px;
     margin-top: 17px;
     transform: rotate(1.6deg);
-
   }
 
   .image2 {
@@ -266,16 +246,13 @@
     max-height: 350px;
     margin-top: 55px;
     transform: rotate(-2deg);
-
   }
 
   .learnMore {
     width: 223.568vw;
     height: 400px;
     overflow-x: hidden;
-
   }
-
 
   .learnBox {
     width: 1000px;
@@ -283,12 +260,10 @@
     left: 50%;
     transform: translateX(-50%);
     gap: 12px;
-  
   }
 }
 
 @media only screen and (max-width: 1280px) {
-
   .heading1 {
     font-size: 40px;
   }
@@ -302,7 +277,6 @@
     max-height: 380px;
     margin-top: 17px;
     transform: rotate(1.6deg);
-
   }
 
   .image2 {
@@ -310,16 +284,13 @@
     max-height: 350px;
     margin-top: 55px;
     transform: rotate(-2deg);
-
   }
 
   .learnMore {
     width: 223.568vw;
     height: 400px;
     overflow-x: hidden;
-
   }
-
 
   .learnBox {
     width: 1000px;
@@ -328,14 +299,9 @@
     transform: translateX(-50%);
     gap: 12px;
   }
-
-
-
-
 }
 
 @media only screen and (max-width: 1024px) {
-
   .fundBox {
     height: 370px;
     margin: 164px auto 0px auto;
@@ -374,7 +340,6 @@
     max-height: 329px;
     transform: rotate(1.8deg);
     margin-top: 45px;
-
   }
 
   .image2 {
@@ -382,18 +347,13 @@
     max-height: 325px;
     margin-top: 58px;
     transform: rotate(-2.9deg);
-
   }
 
   .learnMore {
-
     width: 223.568vw;
     height: 340px;
     overflow-x: hidden;
-
   }
-
-
 
   .learnBox {
     /* width: 780px;
@@ -412,11 +372,9 @@
     width: 175px !important;
     height: 40px !important;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
-
   .fundBox {
     height: 300px;
     margin: 100px auto 0px auto;
@@ -446,7 +404,6 @@
     max-width: 630px;
     height: 300px;
     margin: 0px 30px 0px 30px;
-
   }
 
   .image1 {
@@ -454,7 +411,6 @@
     max-height: 250px;
     transform: rotate(1.8deg);
     margin-top: 17px;
-
   }
 
   .image2 {
@@ -462,16 +418,13 @@
     max-height: 230px;
     margin-top: 42px;
     transform: rotate(-2.9deg);
-
   }
 
   .learnMore {
     width: 223.568vw;
     height: 300px;
     overflow-x: hidden;
-
   }
-
 
   .learnBox {
     width: 500px;
@@ -481,20 +434,15 @@
     transform: translateX(-50%);
     /* line-height: 50px; */
     gap: 12px;
-
   }
 
   .learnBox .btn {
     width: 168px !important;
     height: 44px !important;
   }
-
 }
 
-
-
 @media only screen and (max-width: 640px) {
-
   .pictures {
     max-width: 530px;
     height: 200px;
@@ -513,7 +461,6 @@
     max-height: 175px;
     margin-top: 38px;
     transform: rotate(-1.5deg);
-
   }
 
   .learnMore {
@@ -531,8 +478,5 @@
     transform: translateX(-50%);
     /* line-height: 50px; */
     gap: 12px;
-
   }
-
-
 }
