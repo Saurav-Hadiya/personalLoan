@@ -1,0 +1,196 @@
+.heading2 {
+  font-size: 48px;
+  line-height: 72px;
+  color: #002458;
+  text-align: center;
+}
+
+.subtitle4 {
+  font-size: 20px;
+  color: #002458;
+  line-height: 30px;
+  text-align: center;
+}
+
+.body1 {
+  font-size: 18px;
+  line-height: 27px;
+  color: #767a78;
+  text-align: justify;
+}
+
+.subtitle3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #252628;
+  text-align: left;
+}
+
+.finance {
+  width: 100vw;
+  height: 416px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(94.83deg, #f2f8ff 21.1%, #edebff 78.66%);
+}
+
+.financeContent {
+  max-width: 899px;
+  width: 100%;
+  min-height: 252px;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 48px; */
+}
+
+.upperFinanceBox {
+  width: 100%;
+  min-height: 148px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid yellowgreen; */
+}
+
+.upperBox1 {
+  /* border: 2px solid rgb(50, 205, 205); */
+  width: 100%;
+  min-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upperBox2 {
+  /* border: 2px solid rgb(164, 205, 50); */
+  max-width: 681px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 60px; */
+}
+
+.btn {
+  background-color: #0056d2;
+  color: #ffffff;
+  height: 64px;
+  width: 288px;
+  border-radius: 168px;
+  font-size: 22px;
+  line-height: 26.4px;
+  border: none;
+  /* padding: 17px 48px 17px 48px; */
+  gap: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .finance {
+    height: 350px;
+  }
+
+  .fundBox {
+    height: 370px;
+    margin: 164px auto 0px auto;
+  }
+
+  .fundBox .upperBox {
+    height: 250px;
+
+    justify-content: space-between;
+  }
+
+  .btn {
+    height: 54px;
+    width: 270px;
+    font-size: 20px;
+  }
+
+  .heading1 {
+    font-size: 32px;
+    line-height: 54px;
+  }
+
+  .subtitle2 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fundBox {
+    height: 300px;
+    margin: 100px auto 0px auto;
+  }
+
+  .fundBox .upperBox {
+    height: 200px;
+  }
+
+  .btn {
+    height: 54px;
+    width: 250px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .btn {
+    width: 210px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .heading2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .body1 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .subtitle3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .subtitle4 {
+    font-size: 14px;
+    line-height: 21px;
+    color: #002458;
+  }
+
+  .finance {
+    height: 280px;
+  }
+
+  .btn {
+    font-size: 14px;
+    line-height: 21px;
+    gap: 10px;
+    width: 146px;
+    height: 44px;
+    text-align: center;
+    border: 1px solid #0056d2;
+    /* padding: 12px 48px 12px 48px; */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .finance {
+    height: 256px;
+  }
+}

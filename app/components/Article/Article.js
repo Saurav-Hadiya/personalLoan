@@ -52,9 +52,9 @@ const Article = ({ headline, limit, data }) => {
             const image = data.includes.Asset.find(
               (asset) => asset.sys.id === info.fields.images.sys.id
             );
-            const slug = slugify(info.fields.title,{lower:true});
+            const slug = slugify(info.fields.title, { lower: true });
             return (
-              <section className={cnt.content} key={index} >
+              <section className={cnt.content} key={index}>
                 <img
                   src={`http:${image.fields.file.url}`}
                   alt="article-img"
@@ -77,7 +77,7 @@ const Article = ({ headline, limit, data }) => {
         {limit ? (
           <button
             className={`${latoHeading.className} ${cnt.btn}`}
-            onClick={()=>navigateToPage("articles")}
+            onClick={() => navigateToPage("articles")}
           >
             View all
           </button>

@@ -21,7 +21,7 @@ const latoBody = Lato({
   subsets: ["latin"],
 });
 
-const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}`;
+const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=componentDuplex`;
 
 export default async function Articles() {
   const response = await fetch(url);

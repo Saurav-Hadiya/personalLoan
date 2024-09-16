@@ -1,9 +1,10 @@
 .body1 {
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 18px;
   line-height: 27px;
   text-align: center;
   color: #002458;
+
 }
 
 .box {
@@ -13,7 +14,7 @@
 
   gap: 10px;
   background: #e6eefb;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
 .content {
@@ -108,6 +109,12 @@
   min-height: 27px;
   display: flex;
   justify-content: space-between;
+  color: #002458;
+
+}
+
+.customLink {
+  text-decoration: none;
 }
 
 .visibility {

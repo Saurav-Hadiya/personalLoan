@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className={nav.rightNavBox}>
             <ul className={`${lato.className} ${nav.navigation}`}>
               <li>
-                <Link href={"#"} className={nav.body1}>
+                <Link href={"/faqs"} className={nav.body1}>
                   FAQs
                 </Link>
               </li>
@@ -34,12 +34,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href={"#"} className={nav.body1}>
+                <Link href={"/working"} className={nav.body1}>
                   How it works
                 </Link>
               </li>
               <li>
-                <Link href={"#"} className={nav.body1}>
+                <Link href={"/aboutus"} className={nav.body1}>
                   About us
                 </Link>
               </li>

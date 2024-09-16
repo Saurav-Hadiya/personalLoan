@@ -17,7 +17,7 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}`;
+const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=componentDuplex`;
 
 export default async function Home() {
 
@@ -102,7 +102,7 @@ export default async function Home() {
       <Article headline="Latest Articles" limit="3" data={data}/>
 
       {/* FAQ section */}
-      <Faq />
+      <Faq limit='4' />
 
       {/* ContactUs section */}
       <Contact />

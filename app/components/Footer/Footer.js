@@ -25,22 +25,22 @@ const Footer = () => {
             <div className={footer.leftUpper}>
               <ul className={`${latoBody.className} ${footer.navigation}`}>
                 <li>
-                  <Link href={"#"} className={footer.body1}>
+                  <Link href={"#"} className={`${footer.body1} ${footer.customLink}`}>
                     FAQs
                   </Link>
                 </li>
                 <li>
-                  <Link href={"#"} className={footer.body1}>
+                  <Link href={"#"} className={`${footer.body1} ${footer.customLink}`}>
                     Articles
                   </Link>
                 </li>
                 <li>
-                  <Link href={"#"} className={footer.body1}>
+                  <Link href={"#"} className={`${footer.body1} ${footer.customLink}`}>
                     How it works
                   </Link>
                 </li>
                 <li>
-                  <Link href={"#"} className={footer.body1}>
+                  <Link href={"#"} className={`${footer.body1} ${footer.customLink}`}>
                     About us
                   </Link>
                 </li>
@@ -55,9 +55,9 @@ const Footer = () => {
           <hr />
           <div className={footer.lowerBox}>
             <div className={`${footer.rightLower} ${latoBody.className} ${footer.body1}`}>
-              <span>Terms of Service</span>
+              <Link  href={"/termsOfUse"} className={footer.customLink} style={{color:"#002458"}}>Terms of Service</Link>
               <span className={footer.visibility}>|</span>
-              <span>Privacy Policy</span>
+              <Link  href={"/privacyPolicy"} className={footer.customLink} style={{color:"#002458"}}>Privacy Policy</Link>
             </div>
 
             <div className={footer.middleLower}>

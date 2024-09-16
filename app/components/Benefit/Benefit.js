@@ -1,5 +1,4 @@
 import key from "./Benefit.module.css";
-import Link from "next/link";
 import { Lato } from "next/font/google";
 
 const latoHeading = Lato({
