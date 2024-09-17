@@ -1,7 +1,9 @@
-import Image from "next/image";
+import nav from "./Navbar.module.css";
 import Link from "next/link";
 import { Lato } from "next/font/google";
-import nav from "./Navbar.module.css";
+import { IoMdMenu } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
+
 
 const lato = Lato({
   weight: "400",
@@ -9,6 +11,7 @@ const lato = Lato({
 });
 
 const Navbar = () => {
+
   return (
     <>
       <div className={nav.navbar}>
@@ -21,7 +24,12 @@ const Navbar = () => {
           </div>
 
           {/* Right side- navigation */}
+          <input type="checkbox" id='menuCheckbox' className={nav.menuCheckbox} />
           <div className={nav.rightNavBox}>
+            <label htmlFor="menuCheckbox" >
+              <IoIosClose className={nav.closeIcon} />
+            </label>
+
             <ul className={`${lato.className} ${nav.navigation}`}>
               <li>
                 <Link href={"/faqs"} className={nav.body1}>
@@ -45,7 +53,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+
+          <label htmlFor="menuCheckbox" >
+            <IoMdMenu className={nav.menuIcon} />
+          </label>
+
         </div>
+
       </div>
     </>
   );

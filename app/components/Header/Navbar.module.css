@@ -1,3 +1,12 @@
+.body1 {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #002458;
+
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -5,9 +14,11 @@
     min-width: 100%;
     height: 84px;
     box-shadow: 0 2px 4px 0 #E6F0FF;
+    /* border: 2px solid red; */
 }
 
 .navBox {
+    /* border: 2px solid rgb(13, 255, 0); */
     width: 100%;
     max-width: 1520px;
     height: 60px;
@@ -21,7 +32,8 @@
     width: 200.73px;
     height: 60px;
 }
-.imgBox img{
+
+.imgBox img {
     width: 100%;
     height: 100%;
 }
@@ -30,6 +42,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid red; */
+    /* display: none; */
 }
 
 .navigation {
@@ -42,13 +56,54 @@
     gap: 48px;
 }
 
-.body1 {
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: center;
-    color: #002458;
+.closeIcon {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
 
+.menuCheckbox {
+    display: none;
+}
+
+.menuIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.menuCheckbox:checked~.rightNavBox {
+    display: flex;
+    flex-direction: column;
+    background-color: #E6F0FF;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    transition:  all 0.3s ease;
+}
+
+.menuCheckbox:checked~.rightNavBox .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* width: 70vw; */
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+    /* height: 60vh; */
+    border: 1px solid red;
+}
+
+.menuCheckbox:checked~.rightNavBox .closeIcon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1120px) {
@@ -67,6 +122,24 @@
         width: 110.73px;
     }
 
+    .navigation {
+        gap: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .rightNavBox {
+        display: none;
+
+    }
+    .closeIcon{
+        display: block;
+    }
+
+    .menuIcon {
+        display: block;
+    }
     .navigation {
         gap: 15px;
     }
