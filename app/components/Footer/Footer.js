@@ -1,6 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Image from "next/image";
 
 import { Lato } from "next/font/google";
 import Link from "next/link";
@@ -55,13 +56,13 @@ const Footer = () => {
           <hr />
           <div className={footer.lowerBox}>
             <div className={`${footer.rightLower} ${latoBody.className} ${footer.body1}`}>
-              <Link  href={"/termsOfUse"} className={footer.customLink} style={{color:"#002458"}}>Terms of Service</Link>
+              <Link href={"/termsOfUse"} className={footer.customLink} style={{ color: "#002458" }}>Terms of Service</Link>
               <span className={footer.visibility}>|</span>
-              <Link  href={"/privacyPolicy"} className={footer.customLink} style={{color:"#002458"}}>Privacy Policy</Link>
+              <Link href={"/privacyPolicy"} className={footer.customLink} style={{ color: "#002458" }}>Privacy Policy</Link>
             </div>
 
             <div className={footer.middleLower}>
-              <img src="/logo.png" className={footer.imgBox} alt="Logo"/>
+              <Image src="/logo.png" loading="lazy" width={200.73} height={60} alt="Logo" />
             </div>
 
             <div

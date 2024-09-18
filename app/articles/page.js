@@ -1,9 +1,7 @@
-import Link from "next/link";
 import Navbar from "../components/Header/Navbar";
 import Footer from "../components/Footer/Footer";
 import articles from "./page.module.css";
 import Article from "../components/Article/Article";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Lato } from "next/font/google";
 
@@ -12,11 +10,6 @@ const latoHeading = Lato({
   subsets: ["latin"],
 });
 const latoSubHeading = Lato({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const latoBody = Lato({
   weight: "400",
   subsets: ["latin"],
 });
