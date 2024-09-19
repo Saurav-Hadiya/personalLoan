@@ -39,7 +39,7 @@ export default async function Home() {
           </div>
           <div className={styles.box2}>
             <p className={`${latoSubHeading.className} ${styles.subtitle2}`}>
-              Let’s get you connected to a direct lender who can deliver quickly
+              Let's get you connected to a direct lender who can deliver quickly
               and&nbsp;securely!
             </p>
           </div>

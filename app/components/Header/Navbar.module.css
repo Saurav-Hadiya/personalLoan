@@ -68,9 +68,15 @@
 
 }
 
+.closeIcon{
+    display: none;
+    /* width: 48px;
+    height: 48px; */
+    font-size: 28px;
+}
+
 .menuIcon {
-    width: 24px;
-    height: 24px;
+    font-size: 28px;
     cursor: pointer;
     display: none;
 
@@ -80,20 +86,30 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+<<<<<<< HEAD
     background-color: #FFFFFF;
+=======
+    background-color: #E6F0FF;
+>>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
     position: fixed;
     top: 100px;
     right: 0px;
     width: 100%;
     height: 100vh;
     z-index: 1;
+<<<<<<< HEAD
 
 
+=======
+    /* overflow: hidden; */
+    transition:  all 3s ease;
+>>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
 }
 
 .menuCheckbox:checked~.rightNavBox .navigation {
 
     flex-direction: column;
+<<<<<<< HEAD
     width: 100%;
     gap: 48px;
     margin-top: 50px;
@@ -106,6 +122,20 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+=======
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    /* width: 70vw; */
+    width: 100%;
+    gap: 48px;
+    margin-top: 50px;
+    /* height: 60vh; */
+    /* border: 1px solid red; */
+}
+
+.menuCheckbox:checked~ .menuIcon {
+    display: none;
+>>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
 }
 
 .menuCheckbox:checked~ .closeIcon {
@@ -143,8 +173,16 @@
         display: none;
 
     }
+<<<<<<< HEAD
     .menuIcon {
         display: block;
     }
+=======
+
+    .menuIcon {
+        display: block;
+    }
+
+>>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
 
 }
