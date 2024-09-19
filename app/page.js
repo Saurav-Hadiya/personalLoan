@@ -3,10 +3,10 @@ import styles from "./page.module.css";
 import Navbar from "./components/Header/Navbar";
 import Benefit from "./components/Benefit/Benefit";
 import Working from "./components/Working/Working";
-import Article from "./components/Article/Article";
 import Faq from "./components/FAQ/Faq";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Article from "./components/Article/Article";
 
 const latoHeading = Lato({
   weight: "700",
@@ -51,8 +51,8 @@ export default async function Home() {
 
       {/* Pictures */}
       <div className={styles.pictures}>
-        <img src="./image-1.png" className={styles.image1} alt="image-1" />
-        <img src="./image-2.png" className={styles.image2} alt="image-2" />
+        <img src="./image-1.png" className={styles.image1} alt="loanPart-1" />
+        <img src="./image-2.png" className={styles.image2} alt="loanPart-2" />
       </div>
 
       {/* Learn more section */}

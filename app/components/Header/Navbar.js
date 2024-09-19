@@ -1,8 +1,8 @@
 import nav from "./Navbar.module.css";
 import Link from "next/link";
 import { Lato } from "next/font/google";
-import { IoMdMenu } from "react-icons/io";
-import { IoIosClose } from "react-icons/io";
+import { IoMdMenu, IoIosClose} from "react-icons/io";
+import Image from 'next/image';
 
 
 const lato = Lato({
@@ -11,25 +11,25 @@ const lato = Lato({
 });
 
 const Navbar = () => {
-
   return (
-    <>
-      <div className={nav.navbar}>
+    <div className={nav.navbar}>
         {/* Navbar-Box */}
         <div className={nav.navBox}>
           <div className={nav.imgBox}>
             <a href="/">
-              <img src="/logo.png" alt="Logo" />
+              {/* <img src="/logo.png" alt="Logo" /> */}
+              <Image src="/logo.png" alt="Logo" width={200.73} height={60} />
+
             </a>
           </div>
 
           {/* Right side- navigation */}
-          <input type="checkbox" id='menuCheckbox' className={nav.menuCheckbox} />
+          <input
+            type="checkbox"
+            id="menuCheckbox"
+            className={nav.menuCheckbox}
+          />
           <div className={nav.rightNavBox}>
-            <label htmlFor="menuCheckbox" >
-              <IoIosClose className={nav.closeIcon} />
-            </label>
-
             <ul className={`${lato.className} ${nav.navigation}`}>
               <li>
                 <Link href={"/faqs"} className={nav.body1}>
@@ -54,14 +54,14 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <label htmlFor="menuCheckbox" >
-            <IoMdMenu className={nav.menuIcon} />
+          <label htmlFor="menuCheckbox" className={nav.closeIcon}>
+            <IoIosClose  />
           </label>
-
+          <label htmlFor="menuCheckbox" className={nav.menuIcon}>
+            <IoMdMenu  />
+          </label>
         </div>
-
       </div>
-    </>
   );
 };
 

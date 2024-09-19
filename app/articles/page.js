@@ -1,9 +1,7 @@
-import Link from "next/link";
 import Navbar from "../components/Header/Navbar";
 import Footer from "../components/Footer/Footer";
 import articles from "./page.module.css";
 import Article from "../components/Article/Article";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Lato } from "next/font/google";
 
@@ -16,10 +14,6 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-const latoBody = Lato({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=componentDuplex`;
 
@@ -61,3 +55,13 @@ export default async function Articles() {
     </main>
   );
 }
+
+
+export const metadata = () => {
+  return {
+    title: "Articles- Rapid personal loans",
+    description:
+      "Read the lattest articles about finance and loans.",
+  };
+};
+    

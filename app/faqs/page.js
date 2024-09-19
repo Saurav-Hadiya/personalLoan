@@ -55,3 +55,12 @@ export default async function Faqs() {
     </main>
   );
 }
+
+export const metadata = () => {
+  return {
+    title: "FAQs- Rapid personal loans",
+    description:
+      "Read the commomn question's answer to resolve your doubts.",
+  };
+};
+    

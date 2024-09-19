@@ -65,7 +65,7 @@ export default function Working() {
       <section>
         {WorkingProcess.map((item,index)=>{
           return(
-            <BoxShuffle title={item.title} body={item.body} url={item.url}/>
+            <BoxShuffle title={item.title} body={item.body} url={item.url} key={index}/>
           )
         })}
       </section>
@@ -75,3 +75,12 @@ export default function Working() {
     </main>
   );
 }
+
+export const metadata = () => {
+  return {
+    title: "Working- Rapid personal loans",
+    description:
+      "Understand the complete detailed steps from applying to receiving funds",
+  };
+};
+    

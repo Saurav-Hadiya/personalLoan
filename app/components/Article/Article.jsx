@@ -40,8 +40,7 @@ const Article = ({ headline, limit, data }) => {
   const pages = [...Array(totalPages).keys()];
 
   return (
-    <>
-      <div className={cnt.container}>
+    <div className={cnt.container}>
         <div className={cnt.upperContainer}>
           <h2 className={`${latoHeading.className} ${cnt.heading2}`}>
             {headline}
@@ -67,7 +66,7 @@ const Article = ({ headline, limit, data }) => {
                   <div className={`${latoBody.className} ${cnt.body1}`}>
                     {documentToReactComponents(info.fields.body)}
                   </div>
-                  <Link href={`articles/${slug}`}>Read More</Link>
+                  <Link title={`Read More about ${info.fields.title}`} href={`articles/${slug}`} aria-description={`${info.fields.title}`}>Read More</Link>
                 </div>
               </section>
             );
@@ -97,32 +96,12 @@ const Article = ({ headline, limit, data }) => {
                   }`}
                   style={{ color: "#252628", cursor: "pointer" }}
                   onClick={() => setPageNumber(pageNumber - 1)}
+                  onKeyUp={() => setPageNumber(pageNumber - 1)}
                 >
                   Prev
                 </div>
               )}
-              {/* {pages.map((num, index) => {
-                return (
-                  <span
-                    key={index}
-                    className={cnt.page}
-                    style={
-                      pageNumber === num + 1
-                        ? { backgroundColor: "#0056D2", color: "#FFFFFF" }
-                        : undefined
-                    }
-                    onClick={() => setPageNumber(num + 1)}
-                  >
-                    {totalPages > 5
-                      ? index >= 3
-                        ? index === 3
-                          ? "..."
-                          : totalPages
-                        : num + 1
-                      : num + 1}
-                  </span>
-                );
-              })} */}
+              
               {pages.map((num, index) => {
                 return (
                   <span
@@ -134,6 +113,7 @@ const Article = ({ headline, limit, data }) => {
                         : undefined
                     }
                     onClick={() => setPageNumber(num + 1)}
+                    onKeyUp={() => setPageNumber(num + 1)}
                   >
                     {num + 1}
                   </span>
@@ -147,6 +127,7 @@ const Article = ({ headline, limit, data }) => {
                   }`}
                   style={{ color: "#252628", cursor: "pointer" }}
                   onClick={() => setPageNumber(pageNumber + 1)}
+                  onKeyUp={() => setPageNumber(pageNumber + 1)}
                 >
                   Next
                 </div>
@@ -155,7 +136,6 @@ const Article = ({ headline, limit, data }) => {
           </div>
         )}
       </div>
-    </>
   );
 };
 
