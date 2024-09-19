@@ -14,10 +14,6 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
 const url = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=componentDuplex`;
 
 export default async function Articles() {

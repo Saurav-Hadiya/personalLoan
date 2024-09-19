@@ -14,7 +14,7 @@ const latoSubHeading = Lato({
   subsets: ["latin"],
 });
 
-<<<<<<< HEAD
+
 export const revalidate = 86400; // 1 day in seconds 
 
 export default async function Aboutus() {
@@ -22,14 +22,7 @@ export default async function Aboutus() {
   let response = await fetch(aboutDetail);
   let data = await response.json();
   let dataToShow = await data.items;
-=======
-const aboutDetail = `${process.env.BASE_URL}/spaces/${process.env.SPACES}/entries?access_token=${process.env.Aboutus_Token}&content_type=pages`;
 
-export default async function Aboutus() {
-  const response = await fetch(aboutDetail);
-  const data = await response.json();
-  const dataToShow = await data.items;
->>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
   return (
     <main>
       <Navbar />
@@ -74,12 +67,7 @@ export default async function Aboutus() {
           </div>
         </section>
       </article>
-<<<<<<< HEAD
-      {/* 
-    
-=======
       
->>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
       {/* Footer */}
       <Footer />
     </main>

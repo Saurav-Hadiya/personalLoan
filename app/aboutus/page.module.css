@@ -108,10 +108,6 @@
   gap: 12px;
 }
 
-<<<<<<< HEAD
-.contentText {
-  margin-bottom: 25px;
-=======
 .contentText p{
   margin-bottom: 8px;
 }
@@ -119,7 +115,6 @@
 .contentText h3{
   font-weight: 900;
   color: #000;
->>>>>>> f4ecf75f5eda00ed36a9686e31c4700ee29f78db
 }
 
 .page_content h3 {
